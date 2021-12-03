@@ -26,15 +26,12 @@ while i<9:
   i+=1
 
 
-
-
 def validRow (grid,r,num):
     j=0
     while j<9:
         if grid[r][j]==num: return False
         j+=1
     return True
-
 
 
 def validColumn (grid,c,num):
@@ -58,8 +55,6 @@ def validBox(grid,r,c,num):
     return True
 
 
-
-
 # final print the grid 
 
 def printSolution (grid) :
@@ -71,14 +66,11 @@ def printSolution (grid) :
       
 # Backtraking
 
-def Sudouko (grid,arrR,arrC,indx):
-    
+def Sudouko (grid,arrR,arrC,indx):    
     
     if indx==len(arrR) :
         printSolution(grid)
-        print("\n")
         return True
-    
     r=arrR[indx]
     c=arrC[indx]
     i=1
@@ -91,10 +83,8 @@ def Sudouko (grid,arrR,arrC,indx):
         i+=1
     return False 
 
-
        
 print(Sudouko(grid, emptyCeilR, emptyCeilC, 0))       
-        
 
     
     
